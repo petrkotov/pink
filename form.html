@@ -15,99 +15,102 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a>Конкурс</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main>
-      <section class="title-background">
-
+      <section class="heading-background">
+        <img src="#">
+        <p>Конкурс на самое безбашенное путешествие с Пинк</p>
       </section>
-      <section class="download">
-        <a class="download__btn" href="#">Скачать приложение</a>
-        <div class="download__buttons">
-          <a class="download__button  download__button--apple" href="#">Apple</a>
-          <a class="download__button  download__button--android" href="#">Android</a>
-          <a class="download__button  download__button--windows" href="#">Windows</a>
-        </div>
-        <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 10</p>
+      <section class="promo-title">
+        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       </section>
-      <section class="advantages">
-        <p class="advantages  advantages__promo">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
-        <p class="advantages  advantages__title">Поднимает настроение</p>
-        <p class="advantages  advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        <p class="advantages  advantages__title">Меняет мир вокруг</p>
-        <p class="advantages  advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        <p class="advantages  advantages__title">Заводит новых друзей</p>
-        <p class="advantages  advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        <img class="advantages  advantages__example" src="#">
-      </section>
-      <section class="reviews">
-        <div class="reviews__wrapper  slider">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-        </div>
-        <ul class="reviews__list">
-          <li class="reviews__item  reviews__item--petrov  slider__item">
-            <p class="reviews__item-title">Николай Петров</p>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-          <li class="reviews__item  reviews__item--ivanov  slider__item">
-            <p class="reviews__item-title">Николай Иванов</p>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-          <li class="reviews__item  reviews__item--sidorov  slider__item">
-            <p class="reviews__item-title">Николай Сидоров</p>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-        </ul>
-        <div class="reviews__toggles slider__toggles">
-          <label class="slider__toggle" for="reviews-input-1"></label>
-          <label class="slider__toggle" for="reviews-input-2"></label>
-          <label class="slider__toggle" for="reviews-input-3"></label>
-        </div>
-      </section>
-      <section class="rates">
-        <div class="rates__wrapper  slider">
-          <input class="slider__input" type="radio" name="rates" id="rates-input-1">
-          <input class="slider__input" type="radio" name="rates" id="rates-input-2" checked>
-          <input class="slider__input" type="radio" name="rates" id="rates-input-3">
-        </div>
-        <ul class="rates__list">
-          <li class="rates__item  rates__item--base  slider__item">
+      <form class="event-form" action="https://echo.htmlacademy.ru" method="post">
+        <section class="full-name">
+          <label for="first-name" class="full-name full-name__label">ИМЯ:</label>
+          <input class="event-form__input" type="text" id="first-name" name="name" value="Введите ваше имя"></input>
+          <label for="last-name" class="full-name full-name__label">ФАМИЛИЯ:</label>
+          <input class="event-form__input" type="text" id="last-name" name="last-name" value="Укажите фамилию"></input>
+          <label for="patronymic" class="full-name full-name__label">ОТЧЕСТВО:</label>
+          <input class="event-form__input" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже"></input>
+        </section>
+        <section class="travel-list">
+          <p class="travel-list  travel-list__title">ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</p>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="selfie">Сделал селфи с акулой</input>
+          </label>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="beach">Обгорел на пляже</input>
+          </label>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="chuck">Видел Чака Норриса</input>
+          </label>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="souvenirs">Накупил сувениров</input>
+          </label>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="tower">Удержал башню</input>
+          </label>
+          <label class="travel-list travel-list__checkbox">
+            <input type="checkbox" name="hotel">Разгромил отель</input>
+          </label>
+        </section>
+        <section class="contacts">
+          <label for="number" class="contacts contacts__label">НОМЕР ТЕЛЕФОНА</label>
+          <input class="event-form__input" type="text" id="number" name="number" value="+380 XXX-XXX-XXX"></input>
+          <label for="mail" class="contacts contacts__label">АДРЕС ПОЧТЫ</label>
+          <input class="event-form__input" type="text" id="mail" name="mail" value="Введите почту"></input>
+        </section>
+        <section class="phone-os">
+          <p class="phone-os  phone-os__title">С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?</p>
+          <label class="phone-os phone-os__radio">
+            <input type="radio" name="os" value="ios" checked>Pink для iOS</input>
+          </label>
+          <label class="phone-os phone-os__radio">
+            <input type="radio" name="os" value="android">Pink на Android</input>
+          </label>
+          <label class="phone-os phone-os__radio">
+            <input type="radio" name="os" value="wphone">Windows Phone</input>
+          </label>
+        </section>
+        <section class="comment">
+          <p class="comment  comment__title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
+          <textarea class="comment  comment__form" placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
+          <button class="comment  comment__submit" type="submit">Отправить форму</button>
+          <p class="comment  comment__required-label">*</p><p class="comment  comment__required">— ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+        </section>
 
-          </li>
-          <li class="rates__item  rates__item--standard  slider__item">
 
-          </li>
-          <li class="rates__item  rates__item--unlimited  slider__item">
 
-          </li>
-        </ul>
-        <div class="rates__toggles  slider__toggles">
-          <label class="slider__toggle" for="rates-input-1"></label>
-          <label class="slider__toggle" for="rates-input-2"></label>
-          <label class="slider__toggle" for="rates-input-3"></label>
-        </div>
+
+
+
+
+      </form>
+
+
+
+
+
     </main>
     <footer>
-      <section class="contacts">
-        <p class="contacts  contacts__question">Остались вопросы? Свяжитесь с нами!</p>
-        <p class="contacts  contacts__title">Звоните:</p>
-        <a class="contacts  contacts__data" href="tel: +78125556666">+7 (812) 555-66-66</a>
-        <p class="contacts  contacts__title">Пишите:</p>
-        <a class="contacts  contacts__data" href="mailto: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        <p class="contacts  contacts__title">Приезжайте в гости</p>
-        <a class="contacts  contacts__data" href="#">ул. Большая Конюшенная, 19/8</a>
+      <div class="footer-logo">
+        <a class="footer-logo footer-logo__icon" href="index.html"></a>
+        <a href="index.html">PINK</a>
+      </div>
+      <section class="social">
+        <a class="social  social__btn--twitter" href="https://twitter.com">twitter</a>
+        <a class="social  social__btn--facebook" href="https://facebook.com">facebook</a>
+        <a class="social  social__btn--youtube" href="https://youtube.com">youtube</a>
       </section>
-      <section class="map">
-      </section>
+      <div class="copyright">
+        <a href="index.html">Разработано</a>
+        <a class="copyright copyright__icon" href="index.html"></a>
+      </div>
     </footer>
   </body>
 </html>
