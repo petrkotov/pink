@@ -1,1 +1,1 @@
-petrkotov.github.io/pink/
+# https://petrkotov.github.io/pink/
