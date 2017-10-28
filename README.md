@@ -1,0 +1,1 @@
+petrkotov.github.io/pink/
