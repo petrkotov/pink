@@ -32,11 +32,11 @@
       <form class="event-form" action="https://echo.htmlacademy.ru" method="post">
         <section class="full-name">
           <label for="first-name" class="full-name full-name__label">ИМЯ:</label>
-          <input class="event-form__input" type="text" id="first-name" name="name" value="Введите ваше имя"></input>
+          <input class="event-form__input" type="text" id="first-name" name="name" value="Введите ваше имя" required></input>
           <label for="last-name" class="full-name full-name__label">ФАМИЛИЯ:</label>
-          <input class="event-form__input" type="text" id="last-name" name="last-name" value="Укажите фамилию"></input>
+          <input class="event-form__input" type="text" id="last-name" name="last-name" value="Укажите фамилию" required></input>
           <label for="patronymic" class="full-name full-name__label">ОТЧЕСТВО:</label>
-          <input class="event-form__input" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже"></input>
+          <input class="event-form__input" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже" required></input>
         </section>
         <section class="travel-list">
           <p class="travel-list  travel-list__title">ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</p>
@@ -59,11 +59,11 @@
             <input type="checkbox" name="hotel">Разгромил отель</input>
           </label>
         </section>
-        <section class="contacts">
-          <label for="number" class="contacts contacts__label">НОМЕР ТЕЛЕФОНА</label>
-          <input class="event-form__input" type="text" id="number" name="number" value="+380 XXX-XXX-XXX"></input>
-          <label for="mail" class="contacts contacts__label">АДРЕС ПОЧТЫ</label>
-          <input class="event-form__input" type="text" id="mail" name="mail" value="Введите почту"></input>
+        <section class="contacts-form">
+          <label for="number" class="contacts-form  contacts__label">НОМЕР ТЕЛЕФОНА</label>
+          <input class="event-form__input" type="text" id="number" name="number" value="+380 XXX-XXX-XXX" required></input>
+          <label for="mail" class="contacts-form  contacts__label">АДРЕС ПОЧТЫ</label>
+          <input class="event-form__input" type="email" id="mail" name="mail" value="Введите почту" required></input>
         </section>
         <section class="phone-os">
           <p class="phone-os  phone-os__title">С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?</p>
@@ -77,25 +77,13 @@
             <input type="radio" name="os" value="wphone">Windows Phone</input>
           </label>
         </section>
-        <section class="comment">
-          <p class="comment  comment__title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
-          <textarea class="comment  comment__form" placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
-          <button class="comment  comment__submit" type="submit">Отправить форму</button>
-          <p class="comment  comment__required-label">*</p><p class="comment  comment__required">— ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+        <section class="comment-form">
+          <p class="comment-form  comment__title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
+          <textarea class="comment-form  comment__form" placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
+          <button class="comment-form  comment__submit" type="submit">Отправить форму</button>
+          <p class="comment-form  comment__required-label">*</p><p class="comment-form  comment__required">— ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
         </section>
-
-
-
-
-
-
-
       </form>
-
-
-
-
-
     </main>
     <footer>
       <div class="footer-logo">

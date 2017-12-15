@@ -1,0 +1,30 @@
+.heading-background {
+  &__img-wrapper {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 460px;
+    background-image: url("../img/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media @tablet-widths {
+  .heading-background {
+    &__img-wrapper {
+      height: 725px;
+      background-image: url("../img/background-tablet.jpg");
+    }
+  }
+}
+
+@media @desktop-widths {
+  .heading-background {
+    &__img-wrapper {
+      height: 855px;
+      background-image: url("../img/background-desktop.jpg");
+    }
+  }
+}
