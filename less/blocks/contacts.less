@@ -1,0 +1,151 @@
+.contacts {
+  padding-top: 42px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  &__question {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 1.66667;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__data {
+    color: #d22856;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+  &__mail {
+    margin-bottom: 14px;
+  }
+  &__call {
+    margin-bottom: 14px;
+  }
+}
+
+@media @tablet-widths {
+  .contacts .contacts__adress .contacts__data {
+    color: #d22856;
+    text-decoration: none;
+    margin-top: 0;
+
+    &:hover {
+      color: #d22856;
+      text-decoration: none;
+    }
+    &:active {
+      color: #d22856;
+      text-decoration: none;
+    }
+  }
+
+  .contacts {
+    padding: 46px 40px 21px;
+    position: relative;
+
+    &__wrapper {
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+
+    &__question {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 300;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1.66667;
+      font-weight: 700;
+      min-width: 100%;
+      margin-bottom: 21px;
+      text-align: center;
+    }
+
+    &__data {
+      width: 35%;
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 300;
+      color: #d22856;
+      text-decoration: none;
+      text-align: center;
+      transition: all .3s;
+      margin: 0 auto;
+      &:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+      &:active {
+        color: #ccc;
+        text-decoration: none;
+      }
+    }
+
+    &__call {
+      max-width: 210px;
+      height: 80px;
+      padding-right: 10%;
+      padding-left: 20px;
+    }
+
+    &__mail {
+      max-width: 245px;
+      height: 80px;
+    }
+
+    &__adress {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+    display: flex;
+    flex-wrap: nowrap;
+    &__call {
+      width: 300px;
+      padding: 0;
+    }
+    &__mail {
+      order: 1;
+      width: 300px;
+    }
+    &__adress {
+      order: 0;
+      width: 300px;
+    }
+    &__data {
+      width: 290px;
+      margin: 0 auto;
+    }
+  }
+}

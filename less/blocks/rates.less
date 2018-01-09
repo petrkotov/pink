@@ -1,0 +1,346 @@
+.rates {
+  background-color: #f2f2f2;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  background-position: left 50% top 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image: url(../img/bg-triangle-white.svg);
+
+  &__table {
+    position: relative;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 90px;
+    min-width: 840px;
+    width: 300%;
+    border-spacing: 2px;
+    border-color: grey;
+    transition: transform 1s;
+  }
+
+  & th {
+    position: relative;
+    height: 98px;
+    padding: 0;
+    color: #fff;
+    background-color: #283645;
+    border-right: 2px solid #e5e5e5;
+  }
+
+  & td {
+    position: relative;
+    height: 61px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    width: 100%;
+    padding: 0 70px 0 22px;
+  }
+
+  & td::before {
+    content: attr(data-option);
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  & td:first-child {
+    border-top: 2px solid #e5e5e5;
+  }
+
+  &__icon {
+    color: transparent;
+    text-shadow: none;
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    &--yes {
+      width: 31px;
+      height: 21px;
+      background-image: url(../img/yes.png);
+    }
+    &--no {
+      width: 27px;
+      height: 26px;
+      background-image: url(../img/no.png);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 1.66667;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 300;
+  }
+
+  &__hit {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: -2px;
+    width: 73px;
+    height: 73px;
+    &::before {
+      content: "Хит";
+      position: absolute;
+      top: 12px;
+      left: -24px;
+      width: 102px;
+      height: 28px;
+      transform: rotate(-45deg);
+      font-size: 14px;
+      line-height: 2.14286;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #d22856;
+    }
+  }
+  &__toggles {
+    width: 64px;
+    height: 16px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &::after:hover {
+      border-bottom: 5px solid #aaa;
+      border-right: 5px solid #aaa;
+    }
+    &::before:active {
+      border-bottom: 2px solid #ccc;
+      border-right: 2px solid #ccc;
+    }
+  }
+
+  &__toggles:hover::after,
+  &__toggles:hover::before {
+    border-bottom: 2px solid #aaa;
+    border-right: 2px solid #aaa;
+  }
+
+  &__toggles:active::after,
+  &__toggles:active::before {
+    border-bottom: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+  }
+}
+
+.rates__input[id="rates-input-3"]:checked ~ .rates__table {
+    transform: translateX(-66.66%);
+}
+
+.rates__input[id="rates-input-2"]:checked ~ .rates__table {
+    transform: translateX(-33.33%);
+}
+
+.rates__input[id="rates-input-1"]:checked ~ .rates__table {
+    transform: translateX(0%);
+}
+
+.rates td:first-child,
+.rates th:first-child {
+  display: none;
+}
+
+.rates__toggle{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 6px;
+  background-color: rgba(40,54,69,.3);
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #aaa;
+  }
+  &:active {
+    background-color: #ccc;
+  }
+}
+
+.rates__input[id="rates-input-1"]:checked ~ .rates__toggles .rates__toggle--1,
+.rates__input[id="rates-input-2"]:checked ~ .rates__toggles .rates__toggle--2,
+.rates__input[id="rates-input-3"]:checked ~ .rates__toggles .rates__toggle--3 {
+    box-shadow: 0 0 0 3px #283645;
+}
+
+.rates input[type=radio] {
+  display: none;
+}
+
+@media @tablet-widths {
+  .rates {
+    min-width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1020px;
+    padding: 21px 20px 67px;
+    background-size: 100% 55px;
+    &__icon {
+      color: transparent;
+      text-shadow: none;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%,-50%);
+    }
+
+    &__title {
+      margin-bottom: -3px;
+      font-size: 16px;
+      line-height: 1.875;
+    }
+
+    &__price {
+      font-size: 18px;
+      line-height: 1.66667;
+    }
+
+    &__option {
+      font-size: 14px;
+      line-height: 45px;
+      border: none;
+    }
+
+    &__hit::before {
+      top: 5px;
+      left: -30px;
+    }
+
+    &__table {
+      width: 100%;
+      min-width: 600px;
+    }
+
+    &__toggles {
+      display: none;
+    }
+
+    & td:first-child {
+      border-top: none;;
+    }
+
+    & td {
+      position: relative;
+      height: 47px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: #fff;
+      border: none;
+    }
+
+    & th {
+      position: relative;
+      width: 25%;
+      height: 79px;
+      padding: 5px 20px 0;
+    }
+  }
+
+  .rates td:first-child,
+  .rates th:first-child {
+    display: inline-block;
+  }
+
+  .rates__th--empty {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .rates__input[id="rates-input-1"]:checked ~ .rates__table {
+     transform: translateX(0);
+   }
+  .rates__input[id="rates-input-2"]:checked ~ .rates__table {
+     transform: translateX(0);
+   }
+   .rates__input[id="rates-input-3"]:checked ~ .rates__table {
+      transform: translateX(0);
+   }
+
+   .rates td {
+     /* border: 2px solid #e5e5e5; */
+   }
+   .rates__tr {
+     border-right: 2px solid #e5e5e5;
+     & td:nth-child(2),
+     & td:nth-child(3) {
+        border-right: 2px solid #e5e5e5;
+     }
+   }
+
+   .rates__tr:last-child {
+     border-bottom: 2px solid #e5e5e5;
+   }
+
+   .rates__tr:first-child {
+     border-bottom: 2px solid #e5e5e5;
+   }
+
+   .rates__tr:nth-child(3) {
+     border-top: 2px solid #e5e5e5;
+     border-bottom: 2px solid #e5e5e5;
+   }
+
+   .rates__option:first-child {
+     border-left: 2px solid #e5e5e5;
+     border-right: 2px solid #e5e5e5;
+   }
+
+   .rates .rates__option {
+     padding: 0;
+     width: 93.3%;
+     padding-left: 5%;
+   }
+
+   & td::before {
+     display: none;
+   }
+}
+
+@media @desktop-widths {
+  .rates {
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 100%;
+
+    &__table {
+      margin: 0 auto;
+      margin-top: 50px;
+      max-width: 1020px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+    &__price {
+      font-size: 24px;
+    }
+    &__option {
+      font-size: 18px;
+    }
+
+    & th {
+      position: relative;
+      width: 25%;
+      height: 79px;
+      padding: 15px 20px 10px;
+    }
+  }
+}

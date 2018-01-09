@@ -1,0 +1,85 @@
+.slider__item {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: none;
+}
+
+.rates__item {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.slider__toggles {
+  width: 64px;
+  height: 16px;
+  margin: auto;
+  &::after:hover {
+    border-bottom: 5px solid #aaa;
+    border-right: 5px solid #aaa;
+  }
+  &::before:active {
+    border-bottom: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+  }
+}
+
+.slider__toggle{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 6px;
+  background-color: rgba(40,54,69,.3);
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #aaa;
+  }
+  &:active {
+    background-color: #ccc;
+  }
+}
+
+.slider input[type=radio] {
+  display: none;
+}
+
+#reviews-input-1:checked ~ .reviews__list .slider__item:nth-child(1),
+#reviews-input-2:checked ~ .reviews__list .slider__item:nth-child(2),
+#reviews-input-3:checked ~ .reviews__list .slider__item:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+#reviews-input-1:checked ~ .slider__toggles label[for=reviews-input-1],
+#reviews-input-2:checked ~ .slider__toggles label[for=reviews-input-2],
+#reviews-input-3:checked ~ .slider__toggles label[for=reviews-input-3] {
+    background-color: #ccc;
+    box-shadow: 0 0 0 3px #283645;
+}
+
+
+
+
+#rates-input-1:checked ~ .rates__table .rates__item:nth-child(1),
+#rates-input-2:checked ~ .rates__table .rates__item:nth-child(2),
+#rates-input-3:checked ~ .rates__table .rates__item:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+#rates-input-1:checked ~ .slider__toggles label[for=rates-input-1],
+#rates-input-2:checked ~ .slider__toggles label[for=rates-input-2],
+#rates-input-3:checked ~ .slider__toggles label[for=rates-input-3] {
+    background-color: #ccc;
+    box-shadow: 0 0 0 3px #283645;
+}
+
+@media @tablet-widths {
+  .reviews__toggles {
+    margin-top: 30px;
+  }
+}
