@@ -215,15 +215,15 @@
         <div id="map__wrapper"></div>
           <script>
             function initMap() {
-              var uluru = {lat: -25.363, lng: 131.044};
+              var uluru = {lat: 59.938900, lng: 30.323078};
               var map = new google.maps.Map(document.getElementById('map__wrapper'), {
-                zoom: 4,
+                zoom: 17,
                 center: uluru
               });
-              var image = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+              var image = "https://raw.githubusercontent.com/petrkotov/pink/master/img/map-marker.png";
               var marker = new google.maps.Marker({
                 position: uluru,
-                map: map
+                map: map,
                 icon: image
 
               });
