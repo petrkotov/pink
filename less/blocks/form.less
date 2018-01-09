@@ -1,0 +1,447 @@
+.form {
+position: relative;
+
+  &__wrapper {
+    position: relative;
+    padding: 28px 20px 39px;
+    width: auto;
+  }
+
+  &__field-title {
+    display: block;
+    margin: 0 0 34px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &__field input[placeholder]  {
+    color: #000000;
+  }
+
+  &__field {
+    &--fullname {
+      margin-bottom: 32px;
+    }
+    &--fullname input{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px 18px 10px;
+      font-size: 18px;
+      line-height: 30px;
+      font-family: "PT Sans Narrow",Arial,sans-serif;
+      color: #000000;
+      background-color: #fff;
+      border: 1px solid #e5ddd5;
+      outline: 0;
+      margin-bottom: 6px;
+      transition: border-color 0.2s linear;
+    }
+
+    &--contacts {
+      margin-bottom: 32px;
+    }
+
+    &--contacts input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px 18px 10px;
+      font-size: 18px;
+      line-height: 30px;
+      font-family: "PT Sans Narrow",Arial,sans-serif;
+      color: #000000;
+      background-color: #fff;
+      border: 1px solid #e5ddd5;
+      outline: 0;
+      margin-bottom: 6px;
+    }
+
+    &--fullname input:hover {
+      border-color: #d5c9bd;
+    }
+
+    &--fullname input:focus {
+      border-color: #999999;
+    }
+
+    &--contacts input:hover {
+      border-color: #d5c9bd;
+    }
+
+    &--contacts input:focus {
+      border-color: #999999;
+    }
+
+    &--comment textarea:hover {
+      border-color: #d5c9bd;
+    }
+
+    &--comment textarea:focus {
+      border-color: #999999;
+    }
+
+    &--comments {
+      margin-bottom: 30px;
+    }
+
+    &--comments textarea{
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 112px;
+      padding: 8px 18px 10px;
+      font-size: 18px;
+      line-height: 30px;
+      font-family: "PT Sans Narrow",Arial,sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      border: 1px solid #e5ddd5;
+      outline: 0;
+      resize: none;
+    }
+
+    &--beards {
+      margin-bottom: 18px;
+    }
+
+    &--beards ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &--beards li {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 27px;
+      text-align: center;
+    }
+
+    &--beards label {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      width: 90px;
+      margin-bottom: 12px;
+      padding-top: 64px;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+    }
+
+    &--beards label::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+      background-color: #ffffff;
+      top: 3px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #e5ddd5;
+      transition: border-color 0.1s linear, box-shadow 0.1s linear;
+    }
+
+    &--beards label::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      top: 18px;
+      z-index: -1;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ffffff;
+      transition: border-color 0.1s linear, box-shadow 0.1s linear;
+    }
+
+    &--beards label:hover::before {
+      border-color: #d5c9bd;
+    }
+
+    &--beards label:active::before {
+      box-shadow: inset 0 0 0 15px #d5c9bd;
+    }
+
+    #beard-1:checked + label[for=beard-1]::after,
+    #beard-2:checked + label[for=beard-2]::after,
+    #beard-3:checked + label[for=beard-3]::after,
+    #beard-4:checked + label[for=beard-4]::after,
+    #beard-5:checked + label[for=beard-5]::after {
+      z-index: 5;
+      border: 1px solid #e5ddd5;
+    }
+
+    &--beards input {
+      display: none;
+    }
+
+    &--offers input {
+      display: none;
+    }
+
+    &--offers ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &--offers li {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &--offers label {
+      position: relative;
+      padding-right: 20px;
+      padding-left: 60px;
+      font-size: 18px;
+      line-height: 36px;
+      color: #000000;
+      cursor: pointer;
+      transition: border-color 0.1s linear, background-color 0.1s linear;
+    }
+
+    &--offers label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      box-sizing: border-box;
+      width: 36px;
+      height: 36px;
+      padding: 6px;
+      background-color: #fff;
+      border: 1px solid #e5ddd5;
+    }
+
+    &--offers label:hover::before {
+      border-color: #d5c9bd;
+    }
+
+    &--offers label:active::before {
+      background-color: #d5c9bd;
+    }
+
+    #offer-1:checked + label[for=offer-1]::before,
+    #offer-2:checked + label[for=offer-2]::before,
+    #offer-3:checked + label[for=offer-3]::before,
+    #offer-4:checked + label[for=offer-4]::before,
+    #offer-5:checked + label[for=offer-5]::before,
+    #offer-6:checked + label[for=offer-6]::before {
+      background-image: url(../img/tick.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-origin: content-box;
+    }
+  }
+
+  &__apply {
+    width: 100%;
+    padding: 13px 70px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+    font-family: "PT Sans Narrow",Arial,sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #826550;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.2s linear,color 0.2s linear;
+  }
+
+  &__apply:active {
+    color: rgba(255,255,255,.3);
+  }
+
+  &__apply:focus,
+  &__apply:hover {
+      background-color: #6a4d38;
+  }
+}
+
+.form::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    left: 0;
+    z-index: 5;
+    height: 35px;
+    background-image: url(../img/corner-light.svg);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}
+
+@media @tablet-widths {
+  .form {
+  position: relative;
+
+    &__wrapper {
+      width: 81%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &__field-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 45px;
+      position: relative;
+      font-size: 30px;
+    }
+
+    &__field-title::before {
+    content: "";
+    flex-grow: 1;
+    margin-right: 26px;
+    height: 1px;
+    background-color: #e5ddd5;
+    }
+
+    &__field-title::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 26px;
+    height: 1px;
+    background-color: #e5ddd5;
+    }
+
+    &__field {
+      &--fullname {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+
+      &--fullname label {
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+
+      &--fullname label[for=surname] {
+        margin-left: -1px;
+        margin-right: -1px;
+      }
+
+      &--fullname input::-webkit-input-placeholder {
+        font-size: 23px;
+      }
+
+      &--contacts input::-webkit-input-placeholder {
+        font-size: 23px;
+      }
+
+      &--comments textarea::-webkit-input-placeholder {
+        font-size: 23px;
+      }
+
+      &--fullname input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 8px 18px 10px;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: "PT Sans Narrow",Arial,sans-serif;
+        color: #000000;
+        background-color: #ffffff;
+        border: 1px solid #e5ddd5;
+        outline: 0;
+        padding: 21px 24px 17px;
+        margin-bottom: 35px;
+      }
+
+      &--contacts {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--contacts input {
+        font-size: 23px;
+        padding: 21px 24px 17px;
+        margin-bottom: 0;
+      }
+
+      &--contacts label {
+        margin-bottom: 35px;
+      }
+
+      &--comments {
+        margin-bottom: 0;
+      }
+
+      &--comments textarea {
+        font-size: 23px;
+        min-height: 211px;
+        padding: 19px 24px 17px;
+        margin-bottom: 49px;
+      }
+
+      &--beards label {
+        font-size: 24px;
+      }
+
+      &--offers {
+        margin-bottom: 12px;
+      }
+
+      &--offers ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &--offers li {
+        width: 50%;
+        margin-bottom: 47px;
+      }
+
+      &--offers label {
+        font-size: 24px;
+      }
+    }
+
+    &__apply {
+      padding: 23px 0 24px;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      padding-bottom: 76px;
+    }
+  }
+
+  .form::after {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+  .form {
+    &__field {
+      &--fullname label {
+        flex-grow: 0;
+        width: 30.5%;
+      }
+
+      &--offers li {
+        width: 33%;
+      }
+    }
+  }
+}

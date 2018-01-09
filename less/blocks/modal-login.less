@@ -1,0 +1,254 @@
+.modal-login {
+  display: none;
+  position: absolute;
+  top: 135px;
+  padding: 30px 20px 37px;
+  z-index: 21;
+  background-color: #f8f5f2;
+  filter: drop-shadow(0 30px 50px rgba(0,0,0,.75));
+
+  &--show {
+    display: block;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  p {
+    display: block;
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__form a:hover,
+  &__form a:focus {
+    color: #826550;
+}
+
+  &__form label[for=login],
+  &__form label[for=password] {
+    display: flex;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  &__form input[id=login] {
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+  }
+
+  &__form input[type=text] {
+    flex-grow: 1;
+    padding: 10px 45px 11px 17px;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "PT Sans Narrow",Arial,sans-serif;
+    border: 1px solid #e5ddd5;
+    outline: 0;
+  }
+
+  &__form input[id=password] {
+    background-image: url(../img/lock.svg);
+    margin-bottom: 22px;
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+  }
+
+  &__form input[type=checkbox] {
+    display: none;
+  }
+
+  &__form label[for=remember] {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 60%;
+    padding-left: 48px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  &__form label[for=remember]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #e5ddd5;
+  }
+
+  #remember:checked ~ label[for=remember]::before {
+    background-image: url(../img/tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+  }
+
+  a {
+    display: block;
+    width: 40%;
+    margin-top: 2px;
+    text-align: right;
+    color: #000000;
+    outline: 0;
+    transition: color 0.2s linear;
+  }
+
+  &__enter {
+    display: block;
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: 130px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 12px 42px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow",Arial,sans-serif;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #826550;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.2s linear,color 0.2s linear;
+  }
+
+  &__enter:hover,
+  &__enter:focus {
+    background-color: #6a4d38;
+  }
+
+  &__enter:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  span {
+    display: none;
+  }
+
+  &__close {
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: 130px;
+    margin-top: 30px;
+    padding: 12px 32px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow",Arial,sans-serif;
+    background-color: transparent;
+    outline: 0;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #e5ddd5;
+    transition: background-color 0.1s linear;
+  }
+
+  &__close:hover::before,
+  &__close:hover::after {
+    opacity: 0.7;
+  }
+
+  &__close:active::before,
+  &__close:active::after {
+    opacity: 0.5;
+  }
+}
+
+@media @tablet-widths {
+  .modal-login {
+    position: fixed;
+    top: 128px;
+    left: 50%;
+    box-sizing: border-box;
+    width: 460px;
+    padding: 50px 70px 57px;
+    transform: translateX(-50%);
+
+    &__enter {
+      width: 320px;
+      margin-right: 0;
+      padding-right: 60px;
+      padding-left: 60px;
+      }
+
+    &__enter span {
+      display: inline;
+      }
+
+    &__close {
+      position: absolute;
+      top: -34px;
+      right: -50px;
+      z-index: 105;
+      width: 26px;
+      height: 26px;
+      font-size: 0;
+      border: 0;
+      cursor: pointer;
+      }
+
+    &__close::after {
+      transform: rotate(45deg);
+      }
+
+    &__close::after,
+    &__close::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: #ffffff;
+      }
+
+    &__close::before {
+      transform: rotate(-45deg);
+      }
+    }
+
+  .modal-login--show {
+    display: block;
+    animation: bounce 0.6s;
+   }
+
+   @keyframes bounce {
+   0% {transform: translate(-50%,-2000px);}
+   70% { transform: translate(-50%,30px);}
+   90% { transform: translate(-50%,-10px);}
+   100% { transform: translate(-50%,0);}
+  }
+
+
+
+}
+
+@media @desktop-widths {
+
+}

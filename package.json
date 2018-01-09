@@ -1,16 +1,19 @@
 {
-  "name": "pink-adaptive",
+  "name": "barbershop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "petr kotov",
-  "license": "ISC",
-  "devDependencies": {
+  "main": "gulpfile.js",
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2"
   },
-  "dependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "barbershop"
+  ],
+  "author": "petr kotov",
+  "license": "ISC"
 }

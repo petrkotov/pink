@@ -1,0 +1,210 @@
+.month-work {
+  padding: 28px 20px 20px 20px;
+
+  &__img-wrapper {
+    position: relative;
+    height: 480px;
+    background-color: #e6ded6;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__img-wrapper img{
+    width: 280px;
+  }
+
+  &__img-wrapper::before {
+    content: "РАБОТА МЕСЯЦА";
+    position: absolute;
+    bottom: 29px;
+    left: 0;
+    z-index: 2;
+    width: 128px;
+    padding: 15px 15px 15px 25px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #826550;
+  }
+
+  &__img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 29px;
+    left: 168px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border: 25px solid #826550;
+    border-right: 8px solid transparent;
+    border-left: none;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &__item {
+    padding: 20px 22px 37px 22px;
+    border: 1px solid #e5ddd5;
+    border-top: none;
+  }
+
+  &__blockquote {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__parameter-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    text-transform: uppercase;
+      &--haircut {
+        position: relative;
+        padding-left: 36px;
+        margin-right: 15px;
+      }
+      &--haircut::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: translate(-30%,-50%);
+        background-image: url(../img/scissors-icon.svg);
+      }
+      &--shaving {
+        position: relative;
+        padding-left: 36px;
+        margin-right: 20px;
+      }
+      &--shaving::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: translate(-30%,-50%);
+        background-image: url(../img/beard-icon.svg);
+      }
+      &--mustache {
+        position: relative;
+        padding-left: 36px;
+        margin-right: 15px;
+      }
+      &--mustache::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: translate(-30%,-50%);
+        background-image: url(../img/mustache-icon.svg);
+      }
+  }
+}
+
+@media @tablet-widths {
+.month-work {
+  padding: 28px 0px 20px 0px;
+    &__item {
+      position: relative;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 43px 50px 20px;
+      border-top: 1px solid #e5ddd5;
+      border-left: none;
+    }
+
+    &__img-wrapper {
+      max-width: 270px;
+      min-width: 270px;
+      height: 480px;
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    &__wrapper {
+      display: flex;
+      width: 81%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    &__title {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .month-work {
+      &__img-wrapper {
+        max-width: 480px;
+        min-width: 480px;
+        height: 480px;
+      }
+
+      &__img-wrapper::before,
+      &__img-wrapper::after {
+        display: none;
+      }
+
+      &__img-wrapper img{
+        width: 480px;
+        height: 480px;
+      }
+
+      &__title {
+        padding-top: 100px;
+    }
+
+    &__item::before {
+      content: "РАБОТА МЕСЯЦА";
+      position: absolute;
+      top: 40px;
+      right: 0;
+      z-index: 2;
+      width: 128px;
+      padding: 15px 15px 15px 25px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: #ffffff;
+      background-color: #826550;
+    }
+
+    &__item::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      right: 168px;
+      z-index: 2;
+      width: 0;
+      height: 0;
+      border: 25px solid #826550;
+      border-right: 8px solid transparent;
+      border-left: none;
+      transform: rotate(180deg);
+    }
+  }
+}
