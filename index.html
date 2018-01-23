@@ -36,9 +36,9 @@
       </div>
     </header>
     <main>
-      <article class="heading-background">
+      <section class="heading-background">
         <div class="heading-background__wrapper">
-            <div class="heading-background__img-wrapper">
+          <div class="heading-background__img-wrapper">
             <div class="heading-background__download-wrapper">
               <div class="heading-background__title_wrapper">
                 <h3 class="heading-background__title">Взгляните на жизнь иначе!</h3>
@@ -51,11 +51,10 @@
               </div>
               <p class="heading-background__text">Доступно для iPhone, iPad, Android, Windows Phone, macOS, Windows 10</p>
             </div>
-            </div>
           </div>
         </div>
-      </article>
-      <article class="advantages">
+      </section>
+      <section class="advantages">
         <div class="advantages__wrapper">
           <h3 class="advantages__promo  advantages__promo--top">Устали от серости мегаполиса?</h2>
           <h3 class="advantages__promo  advantages__promo--bot">Нам есть, что вам<br> предложить!</h2>
@@ -82,8 +81,8 @@
             </div>
           </div>
         </div>
-      </article>
-      <article class="reviews">
+      </section>
+      <section class="reviews">
         <div class="reviews__wrapper  slider">
           <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
           <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
@@ -114,8 +113,8 @@
             <label class="slider__toggle" for="reviews-input-3"></label>
           </div>
         </div>
-      </article>
-      <article class="rates">
+      </section>
+      <section class="rates">
         <div class="rates__wrapper">
           <input class="rates__input" type="radio" name="rates" id="rates-input-1">
           <input class="rates__input" type="radio" name="rates" id="rates-input-2" checked>
@@ -191,10 +190,10 @@
             <label class="rates__toggle  rates__toggle--3" for="rates-input-3"></label>
           </div>
         </div>
-      </article>
+      </section>
     </main>
     <footer>
-      <article class="contacts">
+      <section class="contacts">
         <div class="contacts__wrapper">
           <p class="contacts__question">Остались вопросы?<br>Свяжитесь с нами!</p>
           <div class="contacts__call">
@@ -210,29 +209,27 @@
             <p class="contacts__data">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div>
-      </article>
+      </section>
       <section class="map">
         <div id="map__wrapper"></div>
-          <script>
-            function initMap() {
-              var uluru = {lat: 59.938900, lng: 30.323078};
-              var map = new google.maps.Map(document.getElementById('map__wrapper'), {
-                zoom: 17,
-                center: uluru
-              });
-              var image = "https://raw.githubusercontent.com/petrkotov/pink/master/img/map-marker.png";
-              var marker = new google.maps.Marker({
-                position: uluru,
-                map: map,
-                icon: image
-
-              });
-            }
-          </script>
-          <script async defer
+        <script>
+          function initMap() {
+            var uluru = {lat: 59.938900, lng: 30.323078};
+            var map = new google.maps.Map(document.getElementById('map__wrapper'), {
+              zoom: 17,
+              center: uluru
+            });
+            var image = "https://raw.githubusercontent.com/petrkotov/pink/master/img/map-marker.png";
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map,
+              icon: image
+            });
+          }
+        </script>
+        <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH4qLhDo4mBz6OUDMPnN_ZfxLqp7Sc7fo&callback=initMap">
-          </script>
-
+        </script>
       </section>
       <section class="page-footer">
         <div class="page-footer__wrapper">

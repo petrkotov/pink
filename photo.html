@@ -6,132 +6,223 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--closed  main-nav--nojs">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <a class="main-nav__logo" href="#">Pink</a>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">
+              <span class="main-nav__toggle  main-nav__toggle--burger1"></span>
+              <span class="main-nav__toggle  main-nav__toggle--burger2"></span>
+              <span class="main-nav__toggle  main-nav__toggle--burger3"></span>
+              Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <div class="main-nav__logo">
+              <picture>
+                <source media="(min-width: 1020px)" srcset="img/logotype-desktop.png">
+                <source media="(min-width: 700px)" srcset="img/logotype-tablet.png">
+                <img src="img/logotype-mobile.png" alt="Pink">
+              </picture>
+            </div>
+            <ul class="main-nav  main-nav__list  main-nav__list--closed">
+              <li><a class="main-nav__item" href="index.html">Главная</a></li>
+              <li class="active-item"><a class="main-nav__item">Фотографии</a></li>
+              <li><a class="main-nav__item" href="form.html">Конкурс</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="heading-background">
-        <img src="#">
-        <p>Фотографии пользователей</p>
-      </section>
-      <section class="promo-title">
-        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      </section>
-      <article class="top-photo">
-        <span class="top-photo  top-photo__label"></span>
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Анна</p>
-            <time datetime="12:00" class="comment  comment__time">(5 МИНУТ НАЗАД)</time>
-            <p class="comment  comment__body">Прыгать или нет? Напишите в коментарии свой совет и смотрите
-            прямую транслацию в перископе, задавайте свои вопросы!</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 215</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Левон</p>
-            <time datetime="11:00" class="comment  comment__time">(5 ЧАСОВ НАЗАД)</time>
-            <p class="comment  comment__body">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 356</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Антон</p>
-            <time datetime="12:00" class="comment  comment__time">(12 ЧАСОВ НАЗАД)</time>
-            <p class="comment  comment__body">Соседи будут рады!</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 511</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Борис</p>
-            <time datetime="03:00" class="comment  comment__time">(20 ЧАСОВ НАЗАД)</time>
-            <p class="comment  comment__body">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 215</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Сергей</p>
-            <time datetime="08:00" class="comment  comment__time">(25 ЧАСОВ НАЗАД)</time>
-            <p class="comment  comment__body">Самая кубанская в мире!</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 115</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Максим</p>
-            <time datetime="14:00" class="comment  comment__time">(40 ЧАСОВ НАЗАД)</time>
-            <p class="comment  comment__body">Где снег-то?</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 268</p>
-          </section>
-      </article>
-      <article class="photo">
-        <img src="#">
-          <section class="comment">
-            <p class="comment  comment__name">Надежда</p>
-            <time datetime="00:00" class="comment  comment__time">>(45 МИНУТ НАЗАД)</time>
-            <p class="comment  comment__body">Всем GM и взаимные лайки!</p>
-            <a class="comment  comment__icon"></a>
-            <p class="comment  comment__likes">НРАВИТСЯ: 1782</p>
-          </section>
-      </article>
-      <section class="promo-title  promo-title--ending">
-        <p>Затмите их всех!
-        Выкладывайте все, что накопилось в телефоне!</p>
-      </section>
-      <section class="editor">
-        <img src="#">
-        <span class="editor  editor__icon--crop"></span>
-        <span class="editor  editor__icon--fill"></span>
-        <span class="editor  editor__icon--brightness"></span>
-        <div class="slider">
-          <span class="slider  slider-bar"></span>
-          <span class="slider  slider-toggle"></span>
+        <div class="heading-background__wrapper  heading-background__wrapper--inner">
+            <div class="heading-background__img-wrapper  heading-background__img-wrapper--inner">
+              <div class="heading-background__title_wrapper">
+                <h3 class="heading-background__title  heading-background__title--inner">Фотографии<br> пользователей</h3>
+              </div>
+              <div class="heading-background__promo-title-wrapper  heading-background__promo-title-wrapper--inner">
+                <p class="heading-background__promo-title  heading-background__promo-title--inner">Взгляните на фотографии, которые выкладывают пользователи!
+                  Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <a class="posting-btn">Запостить</a>
-        <a class="posting-btn--cancel">Отмена</a>
       </section>
+      <section class="photo  photo--top">
+        <a class="photo__wrapper  photo__wrapper--top" href="#">
+          <span class="photo__top-label"></span>
+          <img src="img/top-photo.jpg" class="photo__image  photo__image--top">
+        </a>
+        <article class="photo__comment  photo__comment--top">
+          <p class="photo__name  photo__name--top">Анна</p>
+          <time datetime="12:00" class="photo__time  photo__time--top">(5 МИНУТ НАЗАД)</time>
+          <p class="photo__body  photo__body--top">Прыгать или нет? Напишите в коментарии свой совет и смотрите
+          прямую транслацию в перископе, задавайте свои вопросы!</p>
+          <a class="photo__icon  photo__icon--top"></a>
+          <p class="photo__likes  photo__likes--top">НРАВИТСЯ: 215</p>
+        </article>
+      </section>
+      <section class="photo__group">
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-1-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-1-tablet.jpg">
+              <img src="img/photo-1-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Левон</p>
+            <time datetime="11:00" class="photo__time">(5 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 356</p>
+          </article>
+        </section>
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-2-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-2-tablet.jpg">
+              <img src="img/photo-2-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Антон</p>
+            <time datetime="12:00" class="photo__time">(12 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Соседи будут рады!</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 511</p>
+          </article>
+        </section>
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-3-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-3-tablet.jpg">
+              <img src="img/photo-3-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Борис</p>
+            <time datetime="03:00" class="photo__time">(20 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 215</p>
+          </article>
+        </section>
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-4-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-4-tablet.jpg">
+              <img src="img/photo-4-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Сергей</p>
+            <time datetime="08:00" class="photo__time">(25 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Самая кубанская в мире!</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 115</p>
+          </article>
+        </section>
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-5-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-5-tablet.jpg">
+              <img src="img/photo-5-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Максим</p>
+            <time datetime="14:00" class="photo__time">(40 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Где снег-то?</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 268</p>
+          </article>
+        </section>
+        <section class="photo">
+          <a class="photo__wrapper" href="#">
+            <picture>
+              <source media="(min-width: 1020px)" srcset="img/photo-6-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/photo-6-tablet.jpg">
+              <img src="img/photo-6-mobile.jpg" class="photo__image">
+            </picture>
+          </a>
+          <article class="photo__comment">
+            <p class="photo__name">Надежда</p>
+            <time datetime="00:00" class="photo__time">(45 ЧАСОВ НАЗАД)</time>
+            <p class="photo__body">Всем GM и взаимные лайки!</p>
+            <a class="photo__icon"></a>
+            <p class="photo__likes">НРАВИТСЯ: 1782</p>
+          </article>
+        </section>
+      </section>
+
+      <section class="heading-background">
+        <div class="heading-background__promo-title-wrapper">
+          <p class="heading-background__promo-title  heading-background__promo-title--ending">Затмите их всех!<br>
+          Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </section>
+
+      <section class="editor">
+        <div class="editor__wrapper">
+          <form action="#" method="post" class="editor__form-wrapper">
+            <picture class="editor__photo">
+              <source media="(min-width: 700px)" srcset="img/editor-photo-tablet.jpg">
+              <img src="img/editor-photo-mobile.jpg">
+            </picture>
+            <div class="editor__interface">
+              <div class="editor__config">
+                <input type="radio" name="config" id="crop" class="editor__config  editor__config--crop" checked>
+                <input type="radio" name="config" id="bright" class="editor__config  editor__config--bright">
+                <input type="radio" name="config" id="contrast" class="editor__config  editor__config--contrast">
+                <label for="crop" class="editor__label">
+                  <span class="editor__icon-wrapper  editor__icon-wrapper--crop"></span>
+                  <span class="editor__scale  editor__scale--crop"></span>
+                </label>
+                <label for="bright" class="editor__label">
+                  <span class="editor__icon-wrapper  editor__icon-wrapper--bright"></span>
+                  <span class="editor__scale  editor__scale--bright"></span>
+                </label>
+                <label for="contrast" class="editor__label">
+                  <span class="editor__icon-wrapper  editor__icon-wrapper--contrast"></span>
+                  <span class="editor__scale  editor__scale--contrast"></span>
+                </label>
+              </div>
+              <div class="editor__result">
+                <button type="submit" class="editor__btn  editor__btn--post">Запостить</a>
+                <button type="reset" class="editor__btn  editor__btn--cancel">Отмена</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
     </main>
     <footer>
-      <div class="footer-logo">
-        <a class="footer-logo footer-logo__icon" href="index.html"></a>
-        <a href="index.html">PINK</a>
-      </div>
-      <section class="social">
-        <a class="social  social__btn--twitter" href="https://twitter.com">twitter</a>
-        <a class="social  social__btn--facebook" href="https://facebook.com">facebook</a>
-        <a class="social  social__btn--youtube" href="https://youtube.com">youtube</a>
+      <section class="page-footer  page-footer--inner">
+        <div class="page-footer__wrapper  page-footer__wrapper--inner">
+          <div class="page-footer__logo  page-footer__logo--inner"></div>
+          <div class="page-footer__social  page-footer__social--inner">
+            <a class="page-footer__social  page-footer__social--twt" href="#"></a>
+            <a class="page-footer__social  page-footer__social--fb" href="#"></a>
+            <a class="page-footer__social  page-footer__social--yt" href="#"></a>
+          </div>
+          <div class="page-footer__copyright  page-footer__copyright--inner">
+            <a href="#">Разработано
+              <img class="page-footer__copyright-logo  page-footer__copyright-logo--inner" src="img/copyright-logo.png"></img>
+            </a>
+          </div>
+        </div>
       </section>
-      <div class="copyright">
-        <a href="index.html">Разработано</a>
-        <a class="copyright copyright__icon" href="index.html"></a>
-      </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>
