@@ -6,99 +6,131 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--closed  main-nav--nojs">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <a class="main-nav__logo" href="#">Pink</a>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">
+              <span class="main-nav__toggle  main-nav__toggle--burger1"></span>
+              <span class="main-nav__toggle  main-nav__toggle--burger2"></span>
+              <span class="main-nav__toggle  main-nav__toggle--burger3"></span>
+              Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <div class="main-nav__logo">
+              <picture>
+                <source media="(min-width: 1020px)" srcset="img/logotype-desktop.png">
+                <source media="(min-width: 700px)" srcset="img/logotype-tablet.png">
+                <img src="img/logotype-mobile.png" alt="Pink">
+              </picture>
+            </div>
+            <ul class="main-nav  main-nav__list  main-nav__list--closed">
+              <li><a class="main-nav__item" href="index.html">Главная</a></li>
+              <li><a class="main-nav__item" href="photo.html">Фотографии</a></li>
+              <li class="active-item"><a class="main-nav__item">Конкурс</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="heading-background">
-        <img src="#">
-        <p>Конкурс на самое безбашенное путешествие с Пинк</p>
-      </section>
-      <section class="promo-title">
-        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <div class="heading-background__wrapper  heading-background__wrapper--form">
+            <div class="heading-background__img-wrapper  heading-background__img-wrapper--form">
+              <div class="heading-background__title_wrapper">
+                <h3 class="heading-background__title  heading-background__title--form">Конкурс на самое безбашенное путешествие&nbsp;с&nbsp;Пинк</h3>
+              </div>
+              <div class="heading-background__promo-title-wrapper  heading-background__promo-title-wrapper--form">
+                <p class="heading-background__promo-title  heading-background__promo-title--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+                   <span class="heading-background__mobile-form-addition">Пожалуйста,&nbsp;заполните форму ниже:</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <form class="event-form" action="https://echo.htmlacademy.ru" method="post">
-        <section class="full-name">
-          <label for="first-name" class="full-name full-name__label">ИМЯ:</label>
-          <input class="event-form__input" type="text" id="first-name" name="name" value="Введите ваше имя" required></input>
-          <label for="last-name" class="full-name full-name__label">ФАМИЛИЯ:</label>
-          <input class="event-form__input" type="text" id="last-name" name="last-name" value="Укажите фамилию" required></input>
-          <label for="patronymic" class="full-name full-name__label">ОТЧЕСТВО:</label>
-          <input class="event-form__input" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже" required></input>
+        <section class="event-form__full-name">
+          <div class="event-form__full-name  event-form__full-name--name">
+            <label for="first-name" class="event-form__label">ИМЯ:</label>
+            <input class="event-form__input" type="text" id="first-name" name="name" placeholder="Введите ваше имя" required></input>
+          </div>
+          <div class="event-form__full-name  event-form__full-name--last-name">
+            <label for="last-name" class="event-form__label">ФАМИЛИЯ:</label>
+            <input class="event-form__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию" required></input>
+          </div>
+          <div class="event-form__full-name  event-form__full-name--patronymic">
+            <label for="patronymic" class="event-form__label">ОТЧЕСТВО:</label>
+            <input class="event-form__input" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже" required></input>
+          </div>
         </section>
-        <section class="travel-list">
-          <p class="travel-list  travel-list__title">ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</p>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="selfie">Сделал селфи с акулой</input>
-          </label>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="beach">Обгорел на пляже</input>
-          </label>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="chuck">Видел Чака Норриса</input>
-          </label>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="souvenirs">Накупил сувениров</input>
-          </label>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="tower">Удержал башню</input>
-          </label>
-          <label class="travel-list travel-list__checkbox">
-            <input type="checkbox" name="hotel">Разгромил отель</input>
-          </label>
+        <section class="event-form__travel-list">
+          <h2 class="event-form__travel-title">ВАШИ&nbsp;БЕЗБАШЕННЫЕ&nbsp;ДОСТИЖЕНИЯ&nbsp;В&nbsp;ПУТЕШЕСТВИИ</h2>
+          <input type="checkbox" name="selfie" id="selfie" class="event-form__checkbox-mark"></input>
+          <label class="event-form__checkbox" for="selfie">Сделал селфи с акулой</label>
+          <input type="checkbox" name="beach" id="beach" class="event-form__checkbox-mark"></input>
+          <label class="event-form__checkbox" for="beach">Обгорел на пляже</label>
+          <input type="checkbox" name="chuck" id="chuck" class="event-form__checkbox-mark" checked></input>
+          <label class="event-form__checkbox" for="chuck">Видел Чака Норриса</label>
+          <input type="checkbox" name="souvenirs" id="souvenirs" class="event-form__checkbox-mark"></input>
+          <label class="event-form__checkbox" for="souvenirs">Накупил сувениров</label>
+          <input type="checkbox" name="tower" id="tower" class="event-form__checkbox-mark" checked></input>
+          <label class="event-form__checkbox" for="tower">Удержал башню</label>
+          <input type="checkbox" name="hotel" id="hotel" class="event-form__checkbox-mark"></input>
+          <label class="event-form__checkbox" for="hotel">Разгромил отель</label>
         </section>
-        <section class="contacts-form">
-          <label for="number" class="contacts-form  contacts__label">НОМЕР ТЕЛЕФОНА</label>
-          <input class="event-form__input" type="text" id="number" name="number" value="+380 XXX-XXX-XXX" required></input>
-          <label for="mail" class="contacts-form  contacts__label">АДРЕС ПОЧТЫ</label>
-          <input class="event-form__input" type="email" id="mail" name="mail" value="Введите почту" required></input>
+        <section class="event-form__contacts-form">
+          <h2 class="event-form__travel-title">КОНТАНТНАЯ ИНФОРМАЦИЯ</h2>
+          <div class="event-form__contacts-form  event-form__contacts-form--number">
+            <label for="number" class="event-form__contacts-label">НОМЕР ТЕЛЕФОНА</label>
+            <input class="event-form__input" type="text" id="number" name="number" placeholder="+380 XXX-XXX-XXX" required></input>
+          </div>
+          <div class="event-form__contacts-form  event-form__contacts-form--mail">
+            <label for="mail" class="event-form__contacts-label">АДРЕС ПОЧТЫ</label>
+            <input class="event-form__input" type="email" id="mail" name="mail" placeholder="Введите почту" required></input>
+          </div>
         </section>
-        <section class="phone-os">
-          <p class="phone-os  phone-os__title">С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?</p>
-          <label class="phone-os phone-os__radio">
-            <input type="radio" name="os" value="ios" checked>Pink для iOS</input>
-          </label>
-          <label class="phone-os phone-os__radio">
-            <input type="radio" name="os" value="android">Pink на Android</input>
-          </label>
-          <label class="phone-os phone-os__radio">
-            <input type="radio" name="os" value="wphone">Windows Phone</input>
-          </label>
+        <section class="event-form__phone-os">
+          <h2 class="event-form__travel-title">С&nbsp;КАКИМ&nbsp;ПРИЛОЖЕНИЕМ&nbsp;ПУТЕШЕСТВОВАЛИ?</h2>
+          <input type="radio" name="os" value="ios" id="ios" class="event-form__radio-mark" checked></input>
+          <label class="event-form__radio" for="ios">Pink для iOS</label>
+          <input type="radio" name="os" value="android" id="android" class="event-form__radio-mark"></input>
+          <label class="event-form__radio" for="android">Pink на Android</label>
+          <input type="radio" name="os" value="wphone" id="wphone" class="event-form__radio-mark"></input>
+          <label class="event-form__radio" for="wphone">Windows Phone</label>
         </section>
-        <section class="comment-form">
-          <p class="comment-form  comment__title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
-          <textarea class="comment-form  comment__form" placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
-          <button class="comment-form  comment__submit" type="submit">Отправить форму</button>
-          <p class="comment-form  comment__required-label">*</p><p class="comment-form  comment__required">— ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+        <section class="event-form__comment-form">
+          <div class="event-form__comment-textarea-wrapper">
+            <h2 class="event-form__travel-title">ОПИШИТЕ СВОИ ЭМОЦИИ</h2>
+            <textarea class="event-form__comment-textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
+          </div>
+          <button class="event-form__submit" type="submit">Отправить форму</button>
+        <div class="event-form__required-wrapper">
+          <p class="event-form__required-label">*</p>
+          <p class="event-form__required">— ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+        </div>
         </section>
       </form>
     </main>
     <footer>
-      <div class="footer-logo">
-        <a class="footer-logo footer-logo__icon" href="index.html"></a>
-        <a href="index.html">PINK</a>
-      </div>
-      <section class="social">
-        <a class="social  social__btn--twitter" href="https://twitter.com">twitter</a>
-        <a class="social  social__btn--facebook" href="https://facebook.com">facebook</a>
-        <a class="social  social__btn--youtube" href="https://youtube.com">youtube</a>
+      <section class="page-footer  page-footer--inner">
+        <div class="page-footer__wrapper  page-footer__wrapper--inner">
+          <div class="page-footer__logo  page-footer__logo--inner"></div>
+          <div class="page-footer__social  page-footer__social--inner">
+            <a class="page-footer__social  page-footer__social--twt" href="#"></a>
+            <a class="page-footer__social  page-footer__social--fb" href="#"></a>
+            <a class="page-footer__social  page-footer__social--yt" href="#"></a>
+          </div>
+          <div class="page-footer__copyright  page-footer__copyright--inner">
+            <a href="#">Разработано
+              <img class="page-footer__copyright-logo  page-footer__copyright-logo--inner" src="img/copyright-logo.png"></img>
+            </a>
+          </div>
+        </div>
       </section>
-      <div class="copyright">
-        <a href="index.html">Разработано</a>
-        <a class="copyright copyright__icon" href="index.html"></a>
-      </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>
